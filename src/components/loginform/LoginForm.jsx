@@ -36,7 +36,6 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (errCheck) {
-      console.log(errCheck)
       if (email === "" || password === "") {
         alert("Please provide E-mail or Password.");
       } else {
