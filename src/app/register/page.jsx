@@ -1,7 +1,18 @@
+"use client";
 import RegisterForm from "@/components/registerform/RegisterForm";
-import React from "react";
+import React, { useEffect } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function register() {
+  const { data: session, error } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session) {
+      router.push("./");
+    }
+  }, [session]);
   return (
     <div className="container p-3">
       <div className="row">

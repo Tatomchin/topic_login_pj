@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  session: {
+    maxAge: 1000000,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
