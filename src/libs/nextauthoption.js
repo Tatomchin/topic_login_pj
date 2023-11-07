@@ -7,7 +7,8 @@ export const authOption = {
         const res = await fetch("http://localhost:3000/api/login", {
           method: "POST",
           body: JSON.stringify(credentials),
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json" ,
+          "Access-Control-Allow-Methods": "POST"},
         });
         const userdata = await res.json();
         if (res.ok && userdata) {
