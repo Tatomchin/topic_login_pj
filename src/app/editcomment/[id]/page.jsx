@@ -5,7 +5,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Editcommentform from "@/components/readtopic/editcommentform/Editcommentform";
 
-export default function page({ params }) {
+export default function Editcommentpage({ params }) {
   const { data: session, error } = useSession();
   const router = useRouter();
   const [comment, setComment] = useState(null);

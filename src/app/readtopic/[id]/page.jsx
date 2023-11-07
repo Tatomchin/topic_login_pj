@@ -4,7 +4,7 @@ import Maintopic from "@/components/readtopic/Maintopic";
 import Writecoment from "@/components/readtopic/Writecoment";
 import React, { useEffect, useState } from "react";
 
-export default function readTopic({ params }) {
+export default function Readtopicpage({ params }) {
   const [topic, setTopic] = useState(null);
   const [allComments, setAllComments] = useState(null);
 

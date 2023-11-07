@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-export default function login() {
+export default function Loginpage() {
   const {data:session, error} = useSession()
   const router = useRouter();
   useEffect(()=>{

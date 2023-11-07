@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-export default function page({ params }) {
+export default function Editcontentpage({ params }) {
   const { data: session, error } = useSession();
   const router = useRouter();
   const [editContent, setEditContent] = useState(<></>);
