@@ -17,7 +17,7 @@ export default function Home() {
         if (res.ok) {
           const dataTopic = await res.json();
           if (dataTopic) {
-            setAllTipic(dataTopic);
+            setAllTipic(dataTopic.topics.reverse());
           } else {
             console.log("No data !");
           }
@@ -37,7 +37,7 @@ export default function Home() {
       {!allTopic ? (
         <p>Loading...</p>
       ) : (
-        allTopic.topics.map((t) => (
+        allTopic.map((t) => (
           <Topic
             key={t._id}
             id={t._id}
